@@ -1,0 +1,51 @@
+﻿/*** 
+The default styles are set in the PROD stylesheet, we can import that
+and override for environment specific
+***/
+@import 'environment-override-ContentManagement.css';
+
+/* -------------------------- */
+/* Local - Color: matrix      */
+/* -------------------------- */
+
+/*** 
+ This changes the labels that are used, set the 'content' to whatever text you want 
+***/
+.logo-wrap:after,
+.sc-globalHeader:before {
+    content: "Local Developer";
+    color: #00FF00;
+}
+
+
+/*** 
+ This sets the background of the header bar. You can use solid colour, CSS gradients or background images
+***/
+.sc-globalHeader {
+    /*background-color: #0000CD; 
+    background: radial-gradient(circle, #000,#00FF00,#000);*/
+    background-image: url('matrix.png');
+}
+
+/*** 
+ If the color of the logout link clashes if your background then change it using this class
+***/
+ul.sc-accountInformation li a.logout,
+.sc-globalHeader .sc-accountInformation .logout {
+    color: #fff;
+}
+
+/*** 
+ This changes the backdrop of the login screen. You can use solid colours, CSS gradient, CSS animations or images
+***/
+.login-main-wrap {
+    background: url('matrix.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/*** 
+ This changes the background colour of the login box background
+***/
+.login-box {
+    background-color: rgba(0, 0, 0, 0.7);
+}

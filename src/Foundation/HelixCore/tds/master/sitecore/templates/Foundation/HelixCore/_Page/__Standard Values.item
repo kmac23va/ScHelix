@@ -1,0 +1,59 @@
+----item----
+version: 1
+id: {9DFCD43A-8790-44B0-BE6C-74A0DEB5ADDF}
+database: master
+path: /sitecore/templates/Foundation/HelixCore/_Page/__Standard Values
+parent: {E47F6069-8300-44C8-B61D-43A84FE5CB94}
+name: __Standard Values
+master: {00000000-0000-0000-0000-000000000000}
+template: {E47F6069-8300-44C8-B61D-43A84FE5CB94}
+templatekey: _Page
+created: 20190520T194351Z
+
+----version----
+language: en
+version: 1
+revision: e786709c-82b5-4183-9fdf-24475e4f2174
+
+----field----
+field: {0D6383BD-3612-4D85-AFE1-E57D2E83ECD9}
+name: Page Title
+key: page title
+content-length: 5
+
+$name
+----field----
+field: {01C8FB5C-69FC-4D0A-8742-23101FD62276}
+name: Meta Page Title
+key: meta page title
+content-length: 5
+
+$name
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20190520T194351Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+e786709c-82b5-4183-9fdf-24475e4f2174
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20190522T102838Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

@@ -3,9 +3,69 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.757
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Configuration", "_Configuration", "{70C1F3D1-69A9-400B-BFB1-2923890FB392}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		NuGet.config = NuGet.config
+		TdsGlobal.config = TdsGlobal.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Tools", "_Tools", "{AF8F9E8E-A28E-4F04-968E-60E47FB4078C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.PwdReset", "tools\Sitecore.PwdReset\Sitecore.PwdReset.csproj", "{A8C91E89-A2D5-45FF-90C5-2F5680C0DBA2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{5BFDD07D-5E54-480B-B67E-A8A200622961}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Feature", "Feature", "{1B908701-21AC-4C21-92C0-A8433BCACA5F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{265E0CED-1EC6-448C-A581-D4CA59268A04}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Publisher", "_Publisher", "{43CE78CA-B351-428A-AB2E-99CC0BBB0AB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScHelix.Publisher", "src\Publisher\code\ScHelix.Publisher.csproj", "{2BECC48F-FAD8-4475-974D-E9C233EF1CDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScHelix.Foundation.HelixCore", "src\Foundation\HelixCore\code\ScHelix.Foundation.HelixCore.csproj", "{0C1E2FEC-AC54-4CF0-905A-890D3BF711D5}"
+EndProject
+Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "ScHelix.Foundation.HelixCore.Serialization.Core", "src\Foundation\HelixCore\tds\core\ScHelix.Foundation.HelixCore.Serialization.Core.scproj", "{88ADB1A3-6F05-4A12-B348-1F4D43F8142B}"
+EndProject
+Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "ScHelix.Foundation.HelixCore.Serialization", "src\Foundation\HelixCore\tds\master\ScHelix.Foundation.HelixCore.Serialization.scproj", "{DB0489E5-FFB1-4B4E-BAF6-5D98F5C4B4EA}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8C91E89-A2D5-45FF-90C5-2F5680C0DBA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8C91E89-A2D5-45FF-90C5-2F5680C0DBA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8C91E89-A2D5-45FF-90C5-2F5680C0DBA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8C91E89-A2D5-45FF-90C5-2F5680C0DBA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BECC48F-FAD8-4475-974D-E9C233EF1CDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BECC48F-FAD8-4475-974D-E9C233EF1CDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BECC48F-FAD8-4475-974D-E9C233EF1CDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BECC48F-FAD8-4475-974D-E9C233EF1CDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C1E2FEC-AC54-4CF0-905A-890D3BF711D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C1E2FEC-AC54-4CF0-905A-890D3BF711D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C1E2FEC-AC54-4CF0-905A-890D3BF711D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C1E2FEC-AC54-4CF0-905A-890D3BF711D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88ADB1A3-6F05-4A12-B348-1F4D43F8142B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88ADB1A3-6F05-4A12-B348-1F4D43F8142B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88ADB1A3-6F05-4A12-B348-1F4D43F8142B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88ADB1A3-6F05-4A12-B348-1F4D43F8142B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB0489E5-FFB1-4B4E-BAF6-5D98F5C4B4EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB0489E5-FFB1-4B4E-BAF6-5D98F5C4B4EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB0489E5-FFB1-4B4E-BAF6-5D98F5C4B4EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB0489E5-FFB1-4B4E-BAF6-5D98F5C4B4EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A8C91E89-A2D5-45FF-90C5-2F5680C0DBA2} = {AF8F9E8E-A28E-4F04-968E-60E47FB4078C}
+		{2BECC48F-FAD8-4475-974D-E9C233EF1CDB} = {43CE78CA-B351-428A-AB2E-99CC0BBB0AB0}
+		{0C1E2FEC-AC54-4CF0-905A-890D3BF711D5} = {5BFDD07D-5E54-480B-B67E-A8A200622961}
+		{88ADB1A3-6F05-4A12-B348-1F4D43F8142B} = {5BFDD07D-5E54-480B-B67E-A8A200622961}
+		{DB0489E5-FFB1-4B4E-BAF6-5D98F5C4B4EA} = {5BFDD07D-5E54-480B-B67E-A8A200622961}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F118555D-551B-49D1-BCE0-88052EBFC5B9}

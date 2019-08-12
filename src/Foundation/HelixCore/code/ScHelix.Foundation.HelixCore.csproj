@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0C1E2FEC-AC54-4CF0-905A-890D3BF711D5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ScHelix.Foundation.HelixCore</RootNamespace>
+    <AssemblyName>ScHelix.Foundation.HelixCore</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Glass.Mapper.Sc.91.Core">
+      <Version>5.5.28</Version>
+    </PackageReference>
+    <PackageReference Include="Glass.Mapper.Sc.91.Mvc">
+      <Version>5.5.28</Version>
+    </PackageReference>
+    <PackageReference Include="NLog">
+      <Version>4.6.6</Version>
+    </PackageReference>
+    <PackageReference Include="Sitecore.Analytics">
+      <Version>9.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="Sitecore.ContentSearch">
+      <Version>9.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="Sitecore.Environment.Styler">
+      <Version>1.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Sitecore.ExperienceEditor">
+      <Version>9.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="Sitecore.Kernel" Version="9.2.0" />
+    <PackageReference Include="Sitecore.Mvc">
+      <Version>9.2.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Config\Include\Foundation\HelixCore\RenderingAssets.config" />
+    <Content Include="App_Config\Include\Foundation\HelixCore\DisableSqlAccessFromXslt.config" />
+    <Content Include="App_Config\Include\Foundation\HelixCore\Events.config" />
+    <Content Include="App_Config\Include\Foundation\HelixCore\LinkManager.config" />
+    <Content Include="App_Config\Include\Foundation\HelixCore\Pipelines.config" />
+    <Content Include="App_Config\Include\Foundation\HelixCore\Settings.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Config\Include\Foundation\HelixCore\SiteDefinition.config" />
+    <Content Include="App_Config\Include\Foundation\HelixCore\Commands.config" />
+    <Content Include="Assets\Foundation\css\sitecore\EnvironmentStyler\environment-override-ContentManagement.css" />
+    <Content Include="Assets\Foundation\css\sitecore\EnvironmentStyler\environment-override-Dev.css" />
+    <Content Include="Assets\Foundation\css\sitecore\EnvironmentStyler\environment-override-Local.css" />
+    <Content Include="Assets\Foundation\css\sitecore\EnvironmentStyler\environment-override-QA.css" />
+    <Content Include="Assets\Foundation\css\sitecore\EnvironmentStyler\environment-override-Stage.css" />
+    <Content Include="Assets\Foundation\css\sitecore\EnvironmentStyler\matrix.jpg" />
+    <Content Include="Assets\Foundation\css\sitecore\EnvironmentStyler\matrix.png" />
+    <Content Include="Assets\Foundation\css\sitecore\RenderingChrome\chrome-styles.css" />
+    <Content Include="Assets\Foundation\js\sitecore\RenderingChrome\ShowRenderingChrome.js" />
+    <Content Include="sitecore\shell\Applications\Templates\CreateTemplate\CreateTemplate.xml" />
+    <Content Include="App_Config\Include\Foundation\HelixCore\EnvironmentStyler.config" />
+    <Content Include="App_Config\Include\Foundation\HelixCore\Search.Config.Solr.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Config\Include\Foundation\HelixCore\Search.ComputedFields.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Config\Include\Foundation\HelixCore\DI.config" />
+    <Content Include="App_Config\Modules\Glass\Glass.Mapper.Sc.config" />
+    <Content Include="App_Config\Modules\Glass\Glass.Mapper.Sc.Start.config" />
+    <Content Include="App_Config\Include\Foundation\HelixCore\Domains.config" />
+    <None Include="Web.config" />
+    <None Include="Web.Helix.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DI\Extensions\ServiceCollectionExtensions.cs" />
+    <Compile Include="DI\Lifetime.cs" />
+    <Compile Include="Extensions\GlassExtensions.cs" />
+    <Compile Include="Extensions\HelperExtensions.cs" />
+    <Compile Include="Extensions\RenderingChrome.cs" />
+    <Compile Include="Extensions\SitecoreExtensions.cs" />
+    <Compile Include="Extensions\UserExtensions.cs" />
+    <Compile Include="Mappings\MetaRootMap.cs" />
+    <Compile Include="Methods\GetAssemblies.cs" />
+    <Compile Include="Methods\GetTypes.cs" />
+    <Compile Include="DI\RegisterContainers.cs" />
+    <Compile Include="DI\ServiceAttribute.cs" />
+    <Compile Include="Mappings\MetaPageMap.cs" />
+    <Compile Include="Models\IMetaPage.cs" />
+    <Compile Include="Models\IMetaRoot.cs" />
+    <Compile Include="ORM\Extensions\MapsConfigFactoryExtension.cs" />
+    <Compile Include="ORM\GlassMapperSc.cs" />
+    <Compile Include="ORM\GlassMapperScCustom.cs" />
+    <Compile Include="Pipelines\HttpRequestBegin\RedirectUserToChangePassword.cs" />
+    <Compile Include="Providers\LinkProvider.cs" />
+    <Compile Include="RenderingAssets\Models\Asset.cs" />
+    <Compile Include="RenderingAssets\Models\AssetRequirementCache.cs" />
+    <Compile Include="RenderingAssets\Models\AssetRequirementList.cs" />
+    <Compile Include="RenderingAssets\Models\AssetType.cs" />
+    <Compile Include="RenderingAssets\Pipelines\GetPageRendering\AddAssets.cs" />
+    <Compile Include="RenderingAssets\Pipelines\GetPageRendering\AddRenderingAssets.cs" />
+    <Compile Include="RenderingAssets\Pipelines\GetPageRendering\ClearAssets.cs" />
+    <Compile Include="RenderingAssets\Repositories\AssetRepository.cs" />
+    <Compile Include="RenderingAssets\Services\RenderAssetsService.cs" />
+    <Compile Include="RenderingAssets\Templates.cs" />
+    <Compile Include="RenderingAssets\Util\AuthUtility.cs" />
+    <Compile Include="RenderingAssets\Util\SitecoreUtil.cs" />
+    <Compile Include="Commands\UnlockItem.cs" />
+    <Compile Include="Repositories\ContentRepository.cs" />
+    <Compile Include="Repositories\ContextRepository.cs" />
+    <Compile Include="Repositories\IContentRepository.cs" />
+    <Compile Include="Repositories\IContextRepository.cs" />
+    <Compile Include="Repositories\ILogRepository.cs" />
+    <Compile Include="Repositories\IRenderingRepository.cs" />
+    <Compile Include="Repositories\LogRepository.cs" />
+    <Compile Include="Repositories\RenderingRepository.cs" />
+    <Compile Include="Search\ComputedFields\AllTemplatesIndexField.cs" />
+    <Compile Include="Events\PublisherCacheClearer.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Exceptions\InvalidMediatorResponseCodeException.cs" />
+    <Compile Include="Extensions\ItemExtensions.cs" />
+    <Compile Include="Extensions\RazorExtensions.cs" />
+    <Compile Include="Extensions\TemplateExtensions.cs" />
+    <Compile Include="Mappings\MetaTemplateMap.cs" />
+    <Compile Include="Search\BaseSearchResultItem.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="Models\IMetaTemplate.cs" />
+    <Compile Include="Models\MediatorResponse.cs" />
+    <Compile Include="Pipelines\BranchPresets\AddFromBranchPreset.cs" />
+    <Compile Include="Pipelines\BranchPresets\AddFromTemplatePresetDisabler.cs" />
+    <Compile Include="Pipelines\BranchPresets\Disabler.cs" />
+    <Compile Include="Pipelines\BranchPresets\LayoutHelper.cs" />
+    <Compile Include="Pipelines\BranchPresets\RenderingActionResult.cs" />
+    <Compile Include="Pipelines\GetFieldValue\IsValidForLanguageFallback.cs" />
+    <Compile Include="Pipelines\HttpRequestBegin\LanguageNotFoundItemResolver.cs" />
+    <Compile Include="Pipelines\HttpRequestBegin\SetSessionBehavior.cs" />
+    <Compile Include="Pipelines\Initialize\AppInitialization.cs" />
+    <Compile Include="Pipelines\LoggedIn\DefaultToSharedLayout.cs" />
+    <Compile Include="Pipelines\RenderField\ShowTitleWhenBlank.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rules\VersionTrim\ArchiveOldVersions.cs" />
+    <Compile Include="Rules\VersionTrim\DeleteOldVersions.cs" />
+    <Compile Include="Rules\VersionTrim\MinVersionsAction.cs" />
+    <Compile Include="Rules\VersionTrim\RecycleOldVersions.cs" />
+    <Compile Include="Search\SearchUtilities.cs" />
+    <Compile Include="Services\IMediatorService.cs" />
+    <Compile Include="Services\MediatorService.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57125</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:57125/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
