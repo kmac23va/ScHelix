@@ -44,10 +44,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Glass.Mapper.Sc.91.Core">
-      <Version>5.5.28</Version>
-    </PackageReference>
-    <PackageReference Include="Glass.Mapper.Sc.91.Mvc">
+    <PackageReference Include="Glass.Mapper.Sc.92.Mvc">
       <Version>5.5.28</Version>
     </PackageReference>
     <PackageReference Include="NLog">

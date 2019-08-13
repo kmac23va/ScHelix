@@ -5,7 +5,6 @@ DO NOT CHANGE THIS FILE - UPDATE GlassMapperScCustom.cs
 
 **************************************/
 
-using System.Collections.Generic;
 using System.Linq;
 using Glass.Mapper;
 using Glass.Mapper.Configuration;
@@ -16,21 +15,23 @@ using Glass.Mapper.Sc.IoC;
 namespace ScHelix.Foundation.HelixCore.ORM {
     public class GlassMapperSc : Glass.Mapper.Sc.Pipelines.Initialize.GlassMapperSc {
         public override IDependencyResolver CreateResolver() {
-            IDependencyResolver resolver = GlassMapperScCustom.CreateResolver();
+            var resolver = GlassMapperScCustom.CreateResolver();
             base.CreateResolver(resolver);
-
             return resolver;
         }
 
         public override IConfigurationLoader[] GetGlassLoaders(Context context) {
-            IEnumerable<IConfigurationLoader> loaders1 = GlassMapperScCustom.GlassLoaders();
-            IConfigurationLoader[] loaders2 = base.GetGlassLoaders(context);
+
+
+            var loaders1 = GlassMapperScCustom.GlassLoaders();
+            var loaders2 = base.GetGlassLoaders(context);
 
             return loaders1.Concat(loaders2).ToArray();
         }
 
-        public override void LoadConfigurationMaps(IDependencyResolver resolver, Context context) {
-            if (!(resolver is DependencyResolver dependencyResolver)) {
+        public override void LoadConfigurationMaps(IDependencyResolver resolver, Glass.Mapper.Context context) {
+            var dependencyResolver = resolver as DependencyResolver;
+            if (dependencyResolver == null) {
                 return;
             }
 
@@ -52,5 +53,4 @@ namespace ScHelix.Foundation.HelixCore.ORM {
 
     }
 }
-
 #endregion
