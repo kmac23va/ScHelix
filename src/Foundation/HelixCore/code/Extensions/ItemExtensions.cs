@@ -9,7 +9,7 @@ using Sitecore.Sites;
 
 namespace ScHelix.Foundation.HelixCore.Extensions {
     public static class ItemExtensions {
-        public static bool IsDerived([NotNull] this Item item, [NotNull] ID templateId) => TemplateManager.GetTemplate(item).IsDerived(templateId);
+        public static bool IsDerived(this Item item, ID templateId) => TemplateManager.GetTemplate(item).IsDerived(templateId);
         public static IEnumerable<Item> GetChildrenDerivedFrom(this Item item, ID templateId) => item.GetChildren().Where(c => c.IsDerived(templateId));
 
         public static Item GetItemBySiteProperty(this SiteContext siteContext, string propertyKey, string language = "en") {

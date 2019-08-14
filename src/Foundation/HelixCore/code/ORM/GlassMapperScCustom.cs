@@ -6,6 +6,7 @@ using Glass.Mapper.IoC;
 using Glass.Mapper.Maps;
 using Glass.Mapper.Sc;
 using Glass.Mapper.Sc.IoC;
+using Glass.Mapper.Sc.Pipelines.Response;
 using ScHelix.Foundation.HelixCore.ORM.Extensions;
 using IDependencyResolver = Glass.Mapper.Sc.IoC.IDependencyResolver;
 
@@ -23,24 +24,10 @@ namespace ScHelix.Foundation.HelixCore.ORM {
             new IConfigurationLoader[] {
             };
 
-        public static void PostLoad() {
-            //Remove the comments to activate CodeFist
-            /* CODE FIRST START
-            var dbs = Sitecore.Configuration.Factory.GetDatabases();
-            foreach (var db in dbs)
-            {
-                var provider = db.GetDataProviders().FirstOrDefault(x => x is GlassDataProvider) as GlassDataProvider;
-                if (provider != null)
-                {
-                    using (new SecurityDisabler())
-                    {
-                        provider.Initialise(db);
-                    }
-                }
-            }
-             * CODE FIRST END
-             */
-        }
+        public static void PostLoad() =>
+            GetModelFromView.ViewTypeResolver = new ChainedViewTypeResolver(new IViewTypeResolver[] {
+                new CompiledViewTypeFinder(), new RegexViewTypeResolver()
+            });
 
         public static void AddMaps(IConfigFactory<IGlassMap> mapsConfigFactory) {
             mapsConfigFactory.AddFluentMaps("*.Foundation.*");

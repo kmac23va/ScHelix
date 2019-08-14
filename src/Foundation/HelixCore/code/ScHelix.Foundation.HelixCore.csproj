@@ -123,6 +123,7 @@
     <Compile Include="Mappings\MetaPageMap.cs" />
     <Compile Include="Models\IMetaPage.cs" />
     <Compile Include="Models\IMetaRoot.cs" />
+    <Compile Include="ORM\CompiledViewTypeFinder.cs" />
     <Compile Include="ORM\Extensions\MapsConfigFactoryExtension.cs" />
     <Compile Include="ORM\GlassMapperSc.cs" />
     <Compile Include="ORM\GlassMapperScCustom.cs" />
