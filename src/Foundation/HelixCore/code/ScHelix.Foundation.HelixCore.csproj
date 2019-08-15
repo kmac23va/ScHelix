@@ -92,6 +92,7 @@
     <Content Include="Assets\Foundation\css\sitecore\EnvironmentStyler\matrix.png" />
     <Content Include="Assets\Foundation\css\sitecore\RenderingChrome\chrome-styles.css" />
     <Content Include="Assets\Foundation\js\sitecore\RenderingChrome\ShowRenderingChrome.js" />
+    <Content Include="sitecore\admin\WildcardTokenExtractor.aspx" />
     <Content Include="sitecore\shell\Applications\Templates\CreateTemplate\CreateTemplate.xml" />
     <Content Include="App_Config\Include\Foundation\HelixCore\EnvironmentStyler.config" />
     <Content Include="App_Config\Include\Foundation\HelixCore\Search.Config.Solr.config">
@@ -104,6 +105,7 @@
     <Content Include="App_Config\Modules\Glass\Glass.Mapper.Sc.config" />
     <Content Include="App_Config\Modules\Glass\Glass.Mapper.Sc.Start.config" />
     <Content Include="App_Config\Include\Foundation\HelixCore\Domains.config" />
+    <Content Include="App_Config\Include\Foundation\HelixCore\Wildcards.config" />
     <None Include="Web.config" />
     <None Include="Web.Helix.config" />
   </ItemGroup>
@@ -159,6 +161,9 @@
     <Compile Include="Extensions\TemplateExtensions.cs" />
     <Compile Include="Mappings\MetaTemplateMap.cs" />
     <Compile Include="Search\BaseSearchResultItem.cs" />
+    <Compile Include="sitecore\admin\WildcardTokenExtractor.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="Models\IMetaTemplate.cs" />
     <Compile Include="Models\MediatorResponse.cs" />
@@ -181,6 +186,24 @@
     <Compile Include="Search\SearchUtilities.cs" />
     <Compile Include="Services\IMediatorService.cs" />
     <Compile Include="Services\MediatorService.cs" />
+    <Compile Include="Wildcards\Events\PublishEnd\WildcardsCachePurgeProcessor.cs" />
+    <Compile Include="Wildcards\Extensions\ItemExtensions.cs" />
+    <Compile Include="Wildcards\ItemResolving\ContentSearchWildcardItemResolver.cs" />
+    <Compile Include="Wildcards\ItemResolving\ItemResolver.cs" />
+    <Compile Include="Wildcards\ItemResolving\ItemResolverCollection.cs" />
+    <Compile Include="Wildcards\ItemResolving\WildcardItemResolver.cs" />
+    <Compile Include="Wildcards\Pipelines\Response\GetPageItem\GetFromWildcard.cs" />
+    <Compile Include="Wildcards\RouteResolver.cs" />
+    <Compile Include="Wildcards\RouteResolverCollection.cs" />
+    <Compile Include="Wildcards\UrlGeneration\TokenValueExtraction\ItemReaderTokenValueExtractor.cs" />
+    <Compile Include="Wildcards\UrlGeneration\TokenValueExtraction\TokenValueExtractor.cs" />
+    <Compile Include="Wildcards\UrlGeneration\TokenValueExtraction\TokenValueExtractorCollection.cs" />
+    <Compile Include="Wildcards\UrlGeneration\TokenValueExtraction\UrlGenerationTokenValueExtractor.cs" />
+    <Compile Include="Wildcards\UrlGeneration\WildcardLinkProvider.cs" />
+    <Compile Include="Wildcards\WildcardException.cs" />
+    <Compile Include="Wildcards\WildcardManager.cs" />
+    <Compile Include="Wildcards\WildcardRouteItem.cs" />
+    <Compile Include="Wildcards\WildcardRouteResolver.cs" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>
